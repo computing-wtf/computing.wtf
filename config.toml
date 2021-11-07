@@ -1,0 +1,29 @@
+baseURL = "https://computing.wtf/"
+languageCode = "en-us"
+title = "computing.wtf"
+theme = "computing.wtf"
+pygmentsUseClasses = true
+
+[permalinks]
+  posts = "/:title/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[menu]
+[[menu.main]]
+menu = "main"
+identifier = "golang"
+name = "Go"
+title = "Go"
+url = "/tags/golang/"
+weight = 1
+
+[[menu.main]]
+menu = "main"
+identifier = "emacs"
+name = "Emacs"
+title = "Emacs"
+url = "/tags/emacs/"
+weight = 2

@@ -1,0 +1,3 @@
+# computing.wtf
+
+Karl's notes from the computing trenches.

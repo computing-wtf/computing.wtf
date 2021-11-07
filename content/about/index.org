@@ -1,0 +1,12 @@
+#+title: About
+#+slug: about
+#+date: 2019-07-23
+#+menu: main
+#+weight: 3
+
+computing.wtf aims to be a quick launching off point when researching unfamiliar computing terms.
+
+
+
+
+ 
