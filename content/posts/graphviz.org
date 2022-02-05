@@ -1,0 +1,27 @@
+---
+title: graphviz
+date: 2019-07-26
+---
+
+#+BEGIN_SRC dot :file testdot.png
+digraph architecture {
+node [color=green] [shape=box]; "A"
+node [color=blue] [shape=oval]; "B", "C"
+"A" -> "B";
+"B" -> "C";
+"C" -> "A";
+"C" -> "Z";
+"Z" -> "A";
+}
+#+END_SRC
+
+
+[[/posts/testdot.png]]
+
+You can use a bunch of different [[https://www.graphviz.org/doc/info/shapes.html][shapes]]. 
+
+
+*** References
+
+- https://graphs.grevian.org/
+- https://www.graphviz.org/doc/info/attrs.html

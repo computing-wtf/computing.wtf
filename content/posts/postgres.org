@@ -1,0 +1,22 @@
+---
+date: 2020-11-17
+title: Add user and database to postgresql
+tags:
+- postgresql
+---
+
+How to create a postgres user and database.
+
+*** Create postgres user
+
+{{< highlight bash >}}
+root@machine:~# su postgres
+postgres@machine:~$ createuser --interactive --pwprompt
+{{</highlight >}}
+
+*** Add postgres database
+
+{{< highlight bash >}}
+root@machine:~# su postgres
+postgres@machine:~$ createdb -O username databasename
+{{</highlight >}}

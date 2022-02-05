@@ -1,0 +1,28 @@
+---
+date: 2020-12-22
+title: gron - greppable JSON from the command-line
+tags:
+- golang
+- json
+- command-line
+---
+
+JSON is everywhere. Sometimes it ends up as a file on my disk and I need to parse it to use some data.
+
+[[https://stedolan.github.io/jq/][jq]] is the best-known way for manipulating JSON from the command line. It's flexible and powerful, but I can never remember the syntax for anything beyond extracting a single field.
+
+I recently discovered [[https://github.com/tomnomnom/gron][gron]] which makes JSON easily greppable by printing each field of a JSON object on its own line.
+
+
+#+BEGIN_SRC bash :results output
+gron "https://api.github.com/repos/tomnomnom/gron/commits?per_page=1" | fgrep "commit.author"
+#+END_SRC
+
+#+RESULTS:
+: json[0].commit.author = {};
+: json[0].commit.author.date = "2020-11-07T01:17:42Z";
+: json[0].commit.author.email = "mail@tomnomnom.com";
+: json[0].commit.author.name = "Tom Hudson";
+
+
+A useful tool to have in the toolbox!

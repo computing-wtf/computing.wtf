@@ -1,0 +1,21 @@
+---
+title: Tab completion for Emacs orgmode source blocks
+date: 2019-07-23
+tags:
+- emacs
+- orgmode
+---
+
+Use [[https://orgmode.org/manual/Easy-templates.html][Easy templates]] like so:
+
+
+{{< highlight shell >}}
+<s *TAB*
+{{< /highlight >}}
+
+And you get a nice orgmode source block.
+{{< highlight org >}}
+#+BEGIN_SRC
+#+END_SRC
+{{< / highlight >}}
+

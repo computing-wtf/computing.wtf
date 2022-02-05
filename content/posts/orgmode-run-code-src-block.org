@@ -1,0 +1,92 @@
+---
+title: Run code in orgmode source blocks
+date: 2020-02-24
+tags:
+- emacs
+- orgmode
+---
+
+
+With [[https://orgmode.org/worg/org-contrib/babel/][Babel]] you can easily execute code for a variety of languages from within orgmode.
+
+To configure Babel for the languages I wanted to execute, I put the following in my ~.emacs.d/init.el~ config.
+
+{{< highlight lisp>}}
+;; Configure babel for these languages
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((python . t)
+    (shell . t)
+    (dot . t)
+    (org . t)
+    (scheme . t)
+    ))
+
+;; run code blocks without prompting first
+(setq org-confirm-babel-evaluate nil)
+
+{{< /highlight>}}
+
+
+Then make a new .org file and try running a snippet in the file.
+{{< highlight python >}}
+
+#+BEGIN_SRC python :results output
+for x in range(0,3):
+  print("Hello world")
+#+END_SRC
+{{< /highlight >}}
+
+Execute the code using C-c C-c (Control-c Control-c) with the cursor in the SRC block.
+
+The results are included in the file like magic. 
+{{< highlight org >}}
+#+RESULTS:
+: Hello world
+: Hello world
+: Hello world
+{{< /highlight >}}
+
+*** Graphviz
+
+It's particularly handy for [[https://www.graphviz.org/documentation/][Graphviz]]. You get a nicely interactive way to draw Graphs.
+
+Execute the block the same way with C-c C-c and you get a link to the graph.
+
+{{< highlight org >}}
+
+#+BEGIN_SRC dot :file graphviz.png
+
+digraph architecture {
+node [color=green] [shape=box]; "A"
+node [color=blue] [shape=oval]; "B", "C"
+"A" -> "B";
+"B" -> "C";
+"C" -> "A";
+"C" -> "D";
+"D" -> "E";
+"E" -> "B";
+}
+
+#+END_SRC
+
+#+RESULTS:
+[[file:graphviz.png]]
+
+{{< /highlight >}}
+
+#+CAPTION: Output of the above dot source
+[[/posts/graphviz.png]]
+
+
+
+
+[[/posts/orgmode-babel-graphviz.png]]
+#+CAPTION: Since you can view images with Emacs, you can split the window (C-x 3) to preview the graph as you build it.
+
+
+*** References
+- [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-dot.html][Babel manual]]
+- [[http://howardism.org/Technical/Emacs/literate-devops.html][Literate Devops]]
+
+

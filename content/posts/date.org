@@ -1,0 +1,55 @@
+---
+date: 2019-07-23
+title: date
+tags:
+- coreutils
+---
+
+I always forget the arguments to [[https://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html][date]].
+
+*** Seconds since UNIX epoch
+
+{{< highlight bash >}}
+date +%s
+{{</highlight >}}
+
+*** Today's date yyyy-mm-dd
+
+{{< highlight bash >}}
+$ date -I
+2019-07-23
+{{< /highlight >}}
+
+{{< highlight bash >}}
+$ date +'%Y-%m-%d'
+2019-07-23
+{{< /highlight >}}
+
+
+*** Next week's date
+
+Use the -d flag
+{{< highlight bash >}}
+$ date -d '+1week'
+Tue 30 Jul 14:50:03 AEST 2019
+{{< /highlight >}}
+
+*** Convert local time to UTC
+{{< highlight bash >}}
+$ TZ=UTC date -d 'TZ="Australia/Sydney" 24 Jun 19 11:45 PM'
+Mon 24 Jun 13:45:00 UTC 2019
+{{< /highlight >}}
+
+
+*** Difference between two dates
+{{< highlight bash >}}
+
+$ START=$(date -d 'TZ="Australia/Sydney" 24 Jun 19 23:45' +'%s')
+$ END=$(date -d 'TZ="Australia/Sydney" 25 Jun 19 02:55' +'%s')
+
+# Number of hours between $END and $START
+$ echo "scale=2;($END-$START)/3600" | bc
+3.16
+
+{{< /highlight >}}
+

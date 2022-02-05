@@ -1,0 +1,16 @@
+---
+title: Create user and database postgres
+---
+
+Create user
+
+#+BEGIN_SRC
+sudo su postgres
+createuser --interactive --pwprompt
+#+END_SRC
+
+Create database
+#+BEGIN_SRC
+sudo su postgres
+createdb -O user dbname
+#+END_SRC

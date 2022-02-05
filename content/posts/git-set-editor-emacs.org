@@ -1,0 +1,18 @@
+---
+title: Set git to use emacs for commit messages
+date: 2019-07-09
+tags:
+- emacs
+- git
+---
+
+#+BEGIN_SRC bash
+git config --global core.editor "emacs"
+#+END_SRC
+
+
+#+BEGIN_SRC
+export VISUAL=emacs
+export EDITOR="$VISUAL"
+
+#+END_SRC

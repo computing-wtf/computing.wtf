@@ -1,0 +1,10 @@
+#+title: Writing for Hugo with Org mode
+#+slug: orgmode-hugo
+#+tags[]: hugo orgmode
+#+date: 2020-02-23
+#+draft: true
+
+*** References
+- https://willschenk.com/articles/2019/using_org_mode_in_hugo/
+
+

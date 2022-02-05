@@ -1,0 +1,20 @@
+---
+title: Disable numbered headings when exporting HTML from orgmode
+date: 2019-08-19
+tags:
+- emacs
+- orgmode
+---
+
+#+BEGIN_SRC org
+#+OPTIONS: num:nil
+
+* Heading 1
+Some test
+** Heading 2
+#+END_SRC
+
+
+*** References
+- [[https://orgmode.org/manual/Export-settings.html#Export-settings][Orgmode manual]]
+- [[https://stackoverflow.com/questions/9092445/how-do-you-remove-numbering-from-headers-when-exporting-from-org-mode][Stackoverflow question]]

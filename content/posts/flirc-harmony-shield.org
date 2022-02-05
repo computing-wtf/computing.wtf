@@ -1,0 +1,20 @@
+---
+title: Control NVIDIA Shield with Logitech Harmony and FLIRC
+date: 2020-07-29
+tags:
+- tv
+- logitech
+- flirc
+- nvidia
+---
+
+I wanted to control my NVIDIA Shield (2017) with my Harmony 650 IR remote control, but the shield doesn't have an IR receiver.
+
+Purchased a FLIRC.
+
+https://flirc.gitbooks.io/flirc-instructions/content/universal-remote-controls/logitech-harmony-remote-controls/nvidia-shield-tv.html
+
+Problem solved! Harmony works a treat.
+
+
+

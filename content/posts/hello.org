@@ -1,0 +1,31 @@
+#+title: Read a file line by line
+#+tags[]: golang
+#+date: 2020-02-20
+#+draft: true
+
+#+BEGIN_SRC go  :imports
+package main
+
+import (
+"fmt"
+)
+
+
+//https://golang.org/pkg/bufio/#example_Scanner_lines
+
+func main() {
+for i := 0; i < 5; i++ {
+fmt.Println("Hello world")
+}
+
+}
+#+END_SRC
+
+#+RESULTS:
+: Hello world
+: Hello world
+: Hello world
+: Hello world
+: Hello world
+
+
